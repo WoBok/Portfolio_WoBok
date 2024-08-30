@@ -1,0 +1,201 @@
+[33mcommit e81aeacfaf60d858fcfa5448c492855e01a202a1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: WoBok <darwin.vinci.wkc@gmail.com>
+Date:   Tue Aug 20 17:42:48 2024 +0800
+
+    Init
+
+ .vsconfig                                          |       6 [32m+[m
+ Assets/3DGamekit.meta                              |       8 [32m+[m
+ Assets/3DGamekit/3DGameKit_Third-PartyNotice.txt   |      10 [32m+[m
+ .../3DGamekit/3DGameKit_Third-PartyNotice.txt.meta |       7 [32m+[m
+ Assets/3DGamekit/Art.meta                          |       8 [32m+[m
+ Assets/3DGamekit/Art/Animations.meta               |       8 [32m+[m
+ .../3DGamekit/Art/Animations/AnimationClips.meta   |       9 [32m+[m
+ .../Animations/AnimationClips/@Staff_Combo01.fbx   |     Bin [31m0[m -> [32m269328[m bytes
+ .../AnimationClips/@Staff_Combo01.fbx.meta         |     141 [32m+[m
+ .../Art/Animations/AnimationClips/Characters.meta  |       9 [32m+[m
+ .../AnimationClips/Characters/@EeldogSwim.fbx      |     Bin [31m0[m -> [32m417664[m bytes
+ .../AnimationClips/Characters/@EeldogSwim.fbx.meta |     242 [32m+[m
+ .../AnimationClips/Characters/Ellen.meta           |       9 [32m+[m
+ .../Characters/Ellen/@EllenCombo1.fbx              |     Bin [31m0[m -> [32m1975872[m bytes
+ .../Characters/Ellen/@EllenCombo1.fbx.meta         |    1065 [32m+[m
+ .../Characters/Ellen/@EllenCombo2.fbx              |     Bin [31m0[m -> [32m2075328[m bytes
+ .../Characters/Ellen/@EllenCombo2.fbx.meta         |    1065 [32m+[m
+ .../Characters/Ellen/@EllenCombo3.fbx              |     Bin [31m0[m -> [32m2110112[m bytes
+ .../Characters/Ellen/@EllenCombo3.fbx.meta         |    1065 [32m+[m
+ .../Characters/Ellen/@EllenCombo4.fbx              |     Bin [31m0[m -> [32m2096288[m bytes
+ .../Characters/Ellen/@EllenCombo4.fbx.meta         |     841 [32m+[m
+ .../Characters/Ellen/@EllenDeath.fbx               |     Bin [31m0[m -> [32m1975040[m bytes
+ .../Characters/Ellen/@EllenDeath.fbx.meta          |     815 [32m+[m
+ .../Characters/Ellen/@EllenGunIdle.fbx             |     Bin [31m0[m -> [32m1785744[m bytes
+ .../Characters/Ellen/@EllenGunIdle.fbx.meta        |     815 [32m+[m
+ .../Characters/Ellen/@EllenGunPutAway.fbx          |     Bin [31m0[m -> [32m2080432[m bytes
+ .../Characters/Ellen/@EllenGunPutAway.fbx.meta     |     815 [32m+[m
+ .../Characters/Ellen/@EllenGunShoot.fbx            |     Bin [31m0[m -> [32m1951440[m bytes
+ .../Characters/Ellen/@EllenGunShoot.fbx.meta       |     815 [32m+[m
+ .../Characters/Ellen/@EllenGunTakeOut.fbx          |     Bin [31m0[m -> [32m2080736[m bytes
+ .../Characters/Ellen/@EllenGunTakeOut.fbx.meta     |     815 [32m+[m
+ .../Characters/Ellen/@EllenHitBack.fbx             |     Bin [31m0[m -> [32m1963328[m bytes
+ .../Characters/Ellen/@EllenHitBack.fbx.meta        |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitBackLeft.fbx         |     Bin [31m0[m -> [32m1965040[m bytes
+ .../Characters/Ellen/@EllenHitBackLeft.fbx.meta    |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitBackRight.fbx        |     Bin [31m0[m -> [32m1964800[m bytes
+ .../Characters/Ellen/@EllenHitBackRight.fbx.meta   |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitFront.fbx            |     Bin [31m0[m -> [32m1964960[m bytes
+ .../Characters/Ellen/@EllenHitFront.fbx.meta       |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitFrontLeft.fbx        |     Bin [31m0[m -> [32m1965168[m bytes
+ .../Characters/Ellen/@EllenHitFrontLeft.fbx.meta   |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitFrontRight.fbx       |     Bin [31m0[m -> [32m1965168[m bytes
+ .../Characters/Ellen/@EllenHitFrontRight.fbx.meta  |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitLeft.fbx             |     Bin [31m0[m -> [32m1964944[m bytes
+ .../Characters/Ellen/@EllenHitLeft.fbx.meta        |     827 [32m+[m
+ .../Characters/Ellen/@EllenHitRight.fbx            |     Bin [31m0[m -> [32m1963264[m bytes
+ .../Characters/Ellen/@EllenHitRight.fbx.meta       |     827 [32m+[m
+ .../AnimationClips/Characters/Ellen/@EllenIdle.fbx |     Bin [31m0[m -> [32m2373568[m bytes
+ .../Characters/Ellen/@EllenIdle.fbx.meta           |     859 [32m+[m
+ .../Characters/Ellen/@EllenIdleLandFast.fbx        |     Bin [31m0[m -> [32m2125568[m bytes
+ .../Characters/Ellen/@EllenIdleLandFast.fbx.meta   |     803 [32m+[m
+ .../AnimationClips/Characters/Ellen/@EllenJump.fbx |     Bin [31m0[m -> [32m2589808[m bytes
+ .../Characters/Ellen/@EllenJump.fbx.meta           |     995 [32m+[m
+ .../Characters/Ellen/@EllenQuickTurnLeft.fbx       |     Bin [31m0[m -> [32m2228336[m bytes
+ .../Characters/Ellen/@EllenQuickTurnLeft.fbx.meta  |     879 [32m+[m
+ .../Characters/Ellen/@EllenQuickTurnRight.fbx      |     Bin [31m0[m -> [32m2397248[m bytes
+ .../Characters/Ellen/@EllenQuickTurnRight.fbx.meta |    1124 [32m+[m
+ .../Characters/Ellen/@EllenRandomIdle1.fbx         |     Bin [31m0[m -> [32m2797744[m bytes
+ .../Characters/Ellen/@EllenRandomIdle1.fbx.meta    |     815 [32m+[m
+ .../Characters/Ellen/@EllenRandomIdle2.fbx         |     Bin [31m0[m -> [32m2837552[m bytes
+ .../Characters/Ellen/@EllenRandomIdle2.fbx.meta    |     815 [32m+[m
+ .../Characters/Ellen/@EllenRandomIdle3.fbx         |     Bin [31m0[m -> [32m2999376[m bytes
+ .../Characters/Ellen/@EllenRandomIdle3.fbx.meta    |     815 [32m+[m
+ .../Characters/Ellen/@EllenRunBackward.fbx         |     Bin [31m0[m -> [32m1983840[m bytes
+ .../Characters/Ellen/@EllenRunBackward.fbx.meta    |     943 [32m+[m
+ .../Characters/Ellen/@EllenRunForward.fbx          |     Bin [31m0[m -> [32m2357200[m bytes
+ .../Characters/Ellen/@EllenRunForward.fbx.meta     |    2144 [32m+[m
+ .../Ellen/@EllenRunForwardBackwardTransition.fbx   |     Bin [31m0[m -> [32m1939216[m bytes
+ .../@EllenRunForwardBackwardTransition.fbx.meta    |     847 [32m+[m
+ .../Characters/Ellen/@EllenRunForwardLanding.fbx   |     Bin [31m0[m -> [32m1954096[m bytes
+ .../Ellen/@EllenRunForwardLanding.fbx.meta         |     815 [32m+[m
+ .../Ellen/@EllenRunForwardLandingFast.fbx          |     Bin [31m0[m -> [32m2378368[m bytes
+ .../Ellen/@EllenRunForwardLandingFast.fbx.meta     |     815 [32m+[m
+ .../Characters/Ellen/@EllenSpawn.fbx               |     Bin [31m0[m -> [32m2317760[m bytes
+ .../Characters/Ellen/@EllenSpawn.fbx.meta          |     815 [32m+[m
+ .../Ellen/@EllenStationaryToRunForward.fbx         |     Bin [31m0[m -> [32m2014496[m bytes
+ .../Ellen/@EllenStationaryToRunForward.fbx.meta    |     827 [32m+[m
+ .../Ellen/@EllenStationaryToTurn180LeftRun.fbx     |     Bin [31m0[m -> [32m2120624[m bytes
+ .../@EllenStationaryToTurn180LeftRun.fbx.meta      |     827 [32m+[m
+ .../Ellen/@EllenStationaryToTurn180LeftWalk.fbx    |     Bin [31m0[m -> [32m2185312[m bytes
+ .../@EllenStationaryToTurn180LeftWalk.fbx.meta     |     827 [32m+[m
+ .../Ellen/@EllenStationaryToTurn180RightRun.fbx    |     Bin [31m0[m -> [32m2223088[m bytes
+ .../@EllenStationaryToTurn180RightRun.fbx.meta     |     830 [32m+[m
+ .../Ellen/@EllenStationaryToTurn180RightWalk.fbx   |     Bin [31m0[m -> [32m2145280[m bytes
+ .../@EllenStationaryToTurn180RightWalk.fbx.meta    |    1045 [32m+[m
+ .../Ellen/@EllenStationaryToTurn90LeftRun.fbx      |     Bin [31m0[m -> [32m2074032[m bytes
+ .../Ellen/@EllenStationaryToTurn90LeftRun.fbx.meta |    1041 [32m+[m
+ .../Ellen/@EllenStationaryToTurn90LeftWalk.fbx     |     Bin [31m0[m -> [32m2085664[m bytes
+ .../@EllenStationaryToTurn90LeftWalk.fbx.meta      |     830 [32m+[m
+ .../Ellen/@EllenStationaryToTurn90RightRun.fbx     |     Bin [31m0[m -> [32m2064096[m bytes
+ .../@EllenStationaryToTurn90RightRun.fbx.meta      |     827 [32m+[m
+ .../Ellen/@EllenStationaryToTurn90RightWalk.fbx    |     Bin [31m0[m -> [32m2026048[m bytes
+ .../@EllenStationaryToTurn90RightWalk.fbx.meta     |    1041 [32m+[m
+ .../Ellen/@EllenStationaryToWalkForward.fbx        |     Bin [31m0[m -> [32m1976256[m bytes
+ .../Ellen/@EllenStationaryToWalkForward.fbx.meta   |     827 [32m+[m
+ .../Ellen/@EllenStrafe90LeftRunBackward.fbx        |     Bin [31m0[m -> [32m2173152[m bytes
+ .../Ellen/@EllenStrafe90LeftRunBackward.fbx.meta   |     815 [32m+[m
+ .../Ellen/@EllenStrafe90LeftWalkBackward.fbx       |     Bin [31m0[m -> [32m2169648[m bytes
+ .../Ellen/@EllenStrafe90LeftWalkBackward.fbx.meta  |     815 [32m+[m
+ .../Ellen/@EllenStrafe90RightBackward.fbx          |     Bin [31m0[m -> [32m2169936[m bytes
+ .../Ellen/@EllenStrafe90RightBackward.fbx.meta     |     815 [32m+[m
+ .../Ellen/@EllenStrafe90RightRunBackward.fbx       |     Bin [31m0[m -> [32m2174848[m bytes
+ .../Ellen/@EllenStrafe90RightRunBackward.fbx.meta  |     815 [32m+[m
+ .../Characters/Ellen/@EllenStrafeRunBackward.fbx   |     Bin [31m0[m -> [32m2169744[m bytes
+ .../Ellen/@EllenStrafeRunBackward.fbx.meta         |    1454 [32m+[m
+ .../Characters/Ellen/@EllenStrafeWalkBackward.fbx  |     Bin [31m0[m -> [32m2149936[m bytes
+ .../Ellen/@EllenStrafeWalkBackward.fbx.meta        |     815 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotLeft135.fbx   |     Bin [31m0[m -> [32m2083776[m bytes
+ .../Ellen/@EllenTurnOnSpotLeft135.fbx.meta         |     836 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotLeft180.fbx   |     Bin [31m0[m -> [32m2133456[m bytes
+ .../Ellen/@EllenTurnOnSpotLeft180.fbx.meta         |     815 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotLeft45.fbx    |     Bin [31m0[m -> [32m1984688[m bytes
+ .../Ellen/@EllenTurnOnSpotLeft45.fbx.meta          |     836 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotLeft90.fbx    |     Bin [31m0[m -> [32m2034288[m bytes
+ .../Ellen/@EllenTurnOnSpotLeft90.fbx.meta          |     815 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotRight135.fbx  |     Bin [31m0[m -> [32m2081904[m bytes
+ .../Ellen/@EllenTurnOnSpotRight135.fbx.meta        |     815 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotRight180.fbx  |     Bin [31m0[m -> [32m2133504[m bytes
+ .../Ellen/@EllenTurnOnSpotRight180.fbx.meta        |     836 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotRight45.fbx   |     Bin [31m0[m -> [32m1984592[m bytes
+ .../Ellen/@EllenTurnOnSpotRight45.fbx.meta         |     815 [32m+[m
+ .../Characters/Ellen/@EllenTurnOnSpotRight90.fbx   |     Bin [31m0[m -> [32m2033984[m bytes
+ .../Ellen/@EllenTurnOnSpotRight90.fbx.meta         |     815 [32m+[m
+ .../Characters/Ellen/@EllenWalkBackward.fbx        |     Bin [31m0[m -> [32m2093392[m bytes
+ .../Characters/Ellen/@EllenWalkBackward.fbx.meta   |     949 [32m+[m
+ .../Characters/Ellen/@EllenWalkForward.fbx         |     Bin [31m0[m -> [32m2093552[m bytes
+ .../Characters/Ellen/@EllenWalkForward.fbx.meta    |    2138 [32m+[m
+ .../Characters/Ellen/@EllenWalkForwardsLanding.fbx |     Bin [31m0[m -> [32m2174784[m bytes
+ .../Ellen/@EllenWalkForwardsLanding.fbx.meta       |     815 [32m+[m
+ .../Characters/Ellen/Ellen_CutscenePortrait.anim   |     236 [32m+[m
+ .../Ellen/Ellen_CutscenePortrait.anim.meta         |      10 [32m+[m
+ .../Characters/Ellen/Ellen_CutscenePortraitUI.anim |     236 [32m+[m
+ .../Ellen/Ellen_CutscenePortraitUI.anim.meta       |      10 [32m+[m
+ .../AnimationClips/Characters/Enemies.meta         |       8 [32m+[m
+ .../AnimationClips/Characters/Enemies/Chomper.meta |       9 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperAttack.fbx  |     Bin [31m0[m -> [32m1731728[m bytes
+ .../Enemies/Chomper/@ChomperAttack.fbx.meta        |     965 [32m+[m
+ .../Enemies/Chomper/@ChomperCutsceneTOIdle.fbx     |     Bin [31m0[m -> [32m1461568[m bytes
+ .../Chomper/@ChomperCutsceneTOIdle.fbx.meta        |     754 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperHit1.fbx    |     Bin [31m0[m -> [32m1486528[m bytes
+ .../Enemies/Chomper/@ChomperHit1.fbx.meta          |     749 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperHit2.fbx    |     Bin [31m0[m -> [32m1486336[m bytes
+ .../Enemies/Chomper/@ChomperHit2.fbx.meta          |     749 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperHit3.fbx    |     Bin [31m0[m -> [32m1804880[m bytes
+ .../Enemies/Chomper/@ChomperHit3.fbx.meta          |     749 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperHit4.fbx    |     Bin [31m0[m -> [32m1486544[m bytes
+ .../Enemies/Chomper/@ChomperHit4.fbx.meta          |     759 [32m+[m
+ .../Characters/Enemies/Chomper/@ChomperIdle.fbx    |     Bin [31m0[m -> [32m4852912[m bytes
+ .../Enemies/Chomper/@ChomperIdle.fbx.meta          |     900 [32m+[m
+ .../Enemies/Chomper/@ChomperRunForward.fbx         |     Bin [31m0[m -> [32m1445344[m bytes
+ .../Enemies/Chomper/@ChomperRunForward.fbx.meta    |     979 [32m+[m
+ .../Enemies/Chomper/@ChomperWalkForward.fbx        |     Bin [31m0[m -> [32m1525776[m bytes
+ .../Enemies/Chomper/@ChomperWalkForward.fbx.meta   |    1003 [32m+[m
+ .../Characters/Enemies/Grenadier.meta              |      10 [32m+[m
+ .../Grenadier/@GrenadierCloseRangeAttack.fbx       |     Bin [31m0[m -> [32m866800[m bytes
+ .../Grenadier/@GrenadierCloseRangeAttack.fbx.meta  |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierDeath.fbx          |     Bin [31m0[m -> [32m1014304[m bytes
+ .../Enemies/Grenadier/@GrenadierDeath.fbx.meta     |     632 [32m+[m
+ .../Characters/Enemies/Grenadier/@GrenadierHit.fbx |     Bin [31m0[m -> [32m920928[m bytes
+ .../Enemies/Grenadier/@GrenadierHit.fbx.meta       |     488 [32m+[m
+ .../Enemies/Grenadier/@GrenadierIdle.fbx           |     Bin [31m0[m -> [32m1031872[m bytes
+ .../Enemies/Grenadier/@GrenadierIdle.fbx.meta      |     392 [32m+[m
+ .../Enemies/Grenadier/@GrenadierMeleeAttack.fbx    |     Bin [31m0[m -> [32m929344[m bytes
+ .../Grenadier/@GrenadierMeleeAttack.fbx.meta       |     646 [32m+[m
+ .../Enemies/Grenadier/@GrenadierRangeAttack.fbx    |     Bin [31m0[m -> [32m941216[m bytes
+ .../Grenadier/@GrenadierRangeAttack.fbx.meta       |     639 [32m+[m
+ .../Enemies/Grenadier/@GrenadierRangeAttack2.fbx   |     Bin [31m0[m -> [32m941216[m bytes
+ .../Grenadier/@GrenadierRangeAttack2.fbx.meta      |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnLeft135.fbx    |     Bin [31m0[m -> [32m843776[m bytes
+ .../Grenadier/@GrenadierTurnLeft135.fbx.meta       |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnLeft180.fbx    |     Bin [31m0[m -> [32m859152[m bytes
+ .../Grenadier/@GrenadierTurnLeft180.fbx.meta       |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnLeft45.fbx     |     Bin [31m0[m -> [32m828064[m bytes
+ .../Grenadier/@GrenadierTurnLeft45.fbx.meta        |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnLeft90.fbx     |     Bin [31m0[m -> [32m828288[m bytes
+ .../Grenadier/@GrenadierTurnLeft90.fbx.meta        |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnRight135.fbx   |     Bin [31m0[m -> [32m842608[m bytes
+ .../Grenadier/@GrenadierTurnRight135.fbx.meta      |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnRight180.fbx   |     Bin [31m0[m -> [32m858080[m bytes
+ .../Grenadier/@GrenadierTurnRight180.fbx.meta      |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnRight45.fbx    |     Bin [31m0[m -> [32m827120[m bytes
+ .../Grenadier/@GrenadierTurnRight45.fbx.meta       |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierTurnRight90.fbx    |     Bin [31m0[m -> [32m827024[m bytes
+ .../Grenadier/@GrenadierTurnRight90.fbx.meta       |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierWalk.fbx           |     Bin [31m0[m -> [32m842208[m bytes
+ .../Enemies/Grenadier/@GrenadierWalk.fbx.meta      |     406 [32m+[m
+ .../Enemies/Grenadier/@GrenadierWalkFast.fbx       |     Bin [31m0[m -> [32m826640[m bytes
+ .../Enemies/Grenadier/@GrenadierWalkFast.fbx.meta  |     406 [32m+[m
+ .../AnimationClips/Characters/Enemies/Spitter.meta |       8 [32m+[m
+ .../Characters/Enemies/Spitter/@SpitterSpit.fbx    |     Bin [31m0[m -> [32m1875488[m bytes
+ .../Enemies/Spitter/@SpitterSpit.fbx.meta          |     794 [32m+[m
+ .../Art/Animations/AnimationClips/Environment.meta |       9 [32m+[m
+ .../AnimationClips/Environment/Doors_close.anim    |     285 [32m+[m
+ .../Environment/Doors_close.anim.meta              |       9 [32m+[m
+ .../AnimationClips/Environment/Doors_open.anim     |     
