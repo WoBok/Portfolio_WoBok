@@ -15,9 +15,9 @@ Shader "Fur/Fur Render" {
         _SpecularIntensity ("Specular Intensity", Range(1, 10)) = 5
         _Gloss ("Gloss", Range(0, 2)) = 0.5
 
-        [Header(Rim)]
-        _RimColor ("Rim Color", Color) = (0, 0, 0, 0)
-        _RimRange ("Rim Range", Range(0, 8)) = 0
+        [Header(Fresnel)]
+        _FresnelColor ("Fresnel Color", Color) = (0, 0, 0, 0)
+        _FresnelRange ("Fresnel Range", Range(0, 8)) = 0
 
         [Header(Fur)]
         _FurNoiseTex ("Fur Noise", 2D) = "white" { }
@@ -85,8 +85,8 @@ Shader "Fur/Fur Render" {
             half4 _FurForce;
             half _FURSTEP;
 
-            half4 _RimColor;
-            half _RimRange;
+            half4 _FresnelColor;
+            half _FresnelRange;
             CBUFFER_END
 
             Varyings vert(Attributes IN) {
@@ -115,8 +115,8 @@ Shader "Fur/Fur Render" {
                 float3 viewDir = normalize(_WorldSpaceCameraPos.xyz - IN.worldPos.xyz);
                 float3 halfDir = normalize(worldLightDir + viewDir);
 
-                half rimFactor = pow(1 - saturate(dot(viewDir, worldNormal)), 8 - _RimRange);
-                half4 rim = half4(_RimColor.xyz * rimFactor, 1);
+                half rimFactor = pow(1 - saturate(dot(viewDir, worldNormal)), 8 - _FresnelRange);
+                half4 rim = half4(_FresnelColor.xyz * rimFactor, 1);
 
                 half halfLambert = dot(worldNormal, worldLightDir) * 0.5 + 0.5;
                 half oneMinusHalfLambert = 1 - halfLambert;
@@ -134,6 +134,35 @@ Shader "Fur/Fur Render" {
 
                 return half4(color, alpha);
             }
+            ENDHLSL
+        }
+        Pass {
+            Name "ShadowCaster"
+            Tags { "LightMode" = "ShadowCaster" }
+
+            ZWrite On
+            ZTest LEqual
+            ColorMask 0
+            Cull[_Cull]
+
+            HLSLPROGRAM
+            #pragma target 2.0
+
+            #pragma vertex ShadowPassVertex
+            #pragma fragment ShadowPassFragment
+
+            #pragma shader_feature_local_fragment _ALPHATEST_ON
+            #pragma shader_feature_local_fragment _GLOSSINESS_FROM_BASE_ALPHA
+
+            #pragma multi_compile_fragment _ LOD_FADE_CROSSFADE
+
+            #pragma multi_compile_instancing
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+
+            #pragma multi_compile_vertex _ _CASTING_PUNCTUAL_LIGHT_SHADOW
+
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
             ENDHLSL
         }
     }

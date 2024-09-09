@@ -17,7 +17,7 @@ MonoBehaviour:
   renderQueueType: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   furBaseMaterial: {fileID: 2100000, guid: ed460432052e625408ea72b3debccedb, type: 2}
   furRenderMaterial: {fileID: 2100000, guid: f60d35394bd8c024ca683a7e0b041bf3, type: 2}
   furLayers: 20
